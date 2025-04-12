@@ -45,6 +45,11 @@ def main():
             if ast.collides(player):
                 print("Game over!")
                 sys.exit()
+                
+            for shot in shots:
+                if shot.collides(ast):
+                    shot.kill()
+                    ast.split()
         
         screen.fill("black")
 
